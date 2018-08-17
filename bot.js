@@ -249,13 +249,14 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 	if (message.toLowerCase().substring(0, 10) == 'bot testa ') {      	
     	
+	var user = message.split(' ')[2];
 		
 	bot.sendMessage({
 			to: channelID,
-			message: 'test ' + message.mentions.members.first() + ''
+			message: 'test ' + user + ''
 		});
 				
-		logger.info(message);
+		logger.info(user);
     	
 	}
 });
