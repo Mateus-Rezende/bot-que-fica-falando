@@ -249,7 +249,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 	if (message.toLowerCase().substring(0, 4) == 'bot testa ') {      	
     	
-		for (int i =0; i<message.length;i++)
+		for (var i =0; i<message.length;i++)
 			if (message[i]=='<'){
 				bot.sendMessage({
 					to: channelID,
