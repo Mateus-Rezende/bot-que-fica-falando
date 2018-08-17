@@ -247,13 +247,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     	
 	}
 
-	if (message.toLowerCase().substring(0, 10) == 'bot testa ') {      	
+	if (message.toLowerCase().substring(0, 21) == 'bot chama d otario o ') {      	
     	
-	var user = message.split(' ')[2];
+	var user = message.split(' ')[5];
 		
 	bot.sendMessage({
 			to: channelID,
-			message: 'test ' + user + ''
+			message: 'nuss ' + user + ' vc é mto otario cara'
 		});
 				
 		logger.info(user);
