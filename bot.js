@@ -261,6 +261,11 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					message: 'nao tem'
     				});
 			}
+			
+			bot.sendMessage({
+					to: channelID,
+					message: message
+    				});
 		}
 		
 		
