@@ -76,7 +76,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         "o chris é gay né 							 - pra ver se o chris é gay (valor aleatorio é gerado)\n"+
         "add na lista: <o que vc quer adicionar> 	  - preciso falar q é sem os sinais d < >?\n"+
         "muda tempo bot <milisegundos> 				- 60000 da 1 minuto\n"+
-	"bot chama o <usario> de <apelido carinhoso>            - Agrada o usuário mencionado com a palavra escolhida`"      
+	"bot chama o <usario> de <apelido carinhoso>   - Agrada o usuário mencionado com a palavra escolhida`"      
 
       });
     }
