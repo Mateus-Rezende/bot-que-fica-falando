@@ -250,18 +250,30 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 	if (message.toLowerCase().substring(0, 12) == 'bot chama o ') {      	
     	
-	message = message.replace(/\s+/g,' ');
+		message = message.replace(/\s+/g,' ');
+
+		var ofensa = message.split(' ')[5];	
+		var user = message.split(' ')[3];
+
+		bot.sendMessage({
+				to: channelID,
+				message: 'nuss ' + user + ' vc é mto ' + ofensa + ' cara'
+			});
+
+			logger.info(user);
+
+	}
+	
+	if (message.toLowerCase().substring(0, 11) == 'bot grita: ') {      	
+    	
+		var texto = message.split(': ')[1];
 		
-	var ofensa = message.split(' ')[5];	
-	var user = message.split(' ')[3];
-		
-	bot.sendMessage({
+		bot.sendMessage({
 			to: channelID,
-			message: 'nuss ' + user + ' vc é mto ' + ofensa + ' cara'
-		});
-				
-		logger.info(user);
+			message: texto, {tts: true}
+    		});
     	
 	}
+	
 });
 
