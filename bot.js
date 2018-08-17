@@ -252,10 +252,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		
 	bot.sendMessage({
 			to: channelID,
-			message: 'test <@!' + message.mentions[0].id + '>'
+			message: 'test <@!' + message.mentions.id + '>'
 		});
 				
-		
+		logger.info(message);
     	
 	}
 });
