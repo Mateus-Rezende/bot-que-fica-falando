@@ -46,14 +46,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
      	//var randSec = (Math.round(Math.random() * 5)) * 1000;
      	if (!emLoop) {
 	     	emLoop = true;
-	     	bot.sendMessage({
+	
+		bot.sendMessage({
 	        	to: channelID,
 	        	message: "ok chefe"
 	      	});
 
-	     	interval = setInterval (falaAleatorio, tempo); // time between each interval in milliseconds
-		}
+	     	interval = setInterval(falaAleatorio, tempo); // time between each interval in milliseconds
 	}
+}
 
     // New command starts here
     if (message.toLowerCase() === "ajuda bot") {
