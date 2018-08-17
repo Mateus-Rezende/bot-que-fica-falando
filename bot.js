@@ -247,7 +247,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     	
 	}
 
-	if (message.toLowerCase().substring(0, 4) == 'bot testa ') {      	
+	if (message.toLowerCase().substring(0, 10) == 'bot testa ') {      	
     	
 		for (var i =0; i<message.length;i++) {
 			if (message[i]=='<'){
