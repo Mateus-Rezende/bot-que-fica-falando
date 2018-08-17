@@ -1,0 +1,14 @@
+{
+  "name": "botQueFala",
+  "version": "1.0.0",
+  "description": "Bot que fala de vez em quando",
+  "main": "bot.js",
+  "author": "Superteus",
+  "scripts": {
+    "start": "node.js"
+  },
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "winston": "^2.4.3"
+  }
+}
