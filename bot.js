@@ -220,7 +220,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 	}
 
-	if (message.toLowerCase().substring(0, 4) == 'bot ') {  
+	if (message.toLowerCase().substring(0, 4) == 'bot o') {  
 
 		var r = Math.round(Math.random() * 1);
 		if (r == 0) {
@@ -247,5 +247,24 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     	
 	}
 
+	if (message.toLowerCase().substring(0, 4) == 'bot testa ') {      	
+    	
+		for (int i =0; i<message.length;i++)
+			if (message[i]=='<'){
+				bot.sendMessage({
+					to: channelID,
+					message: 'tem'
+    				});	
+			} else {
+				bot.sendMessage({
+					to: channelID,
+					message: 'nao tem'
+    				});
+			}
+		}
+		
+		
+    	
+	}
 });
 
