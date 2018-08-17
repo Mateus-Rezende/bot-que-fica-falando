@@ -252,7 +252,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		
 	bot.sendMessage({
 			to: channelID,
-			message: 'test <@!' + message.mentions.id + '>'
+			message: 'test <@!' + message + '>'
 		});
 				
 		logger.info(message);
