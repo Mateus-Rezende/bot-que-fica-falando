@@ -22,6 +22,22 @@ bot.on('ready', function (evt) {
 var emLoop = false;
 var tempo = 90000;
 
+var interval;
+
+function falaAleatorio (){
+	        	
+	var fs = require("fs");
+	var text = fs.readFileSync("./lista.txt").toString('utf-8');
+	var msgs = text.split("\n");
+	//randSec = (Math.round(Math.random() * 5)) * 1000;
+	var randMsg = Math.round(Math.random() * msgs.length-1);
+
+	bot.sendMessage({
+		to: channelID,
+		message: msgs[randMsg] // message to send
+	});
+}
+
 bot.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
 
@@ -35,19 +51,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	        	message: "ok chefe"
 	      	});
 
-	     	interval = setInterval (function (){
-	        	
-	        	var fs = require("fs");
-				var text = fs.readFileSync("./lista.txt").toString('utf-8');
-				var msgs = text.split("\n");
-	        	//randSec = (Math.round(Math.random() * 5)) * 1000;
-	        	var randMsg = Math.round(Math.random() * msgs.length-1);
-
-	        	bot.sendMessage({
-	          			to: channelID,
-	          			message: msgs[randMsg] // message to send
-	        		});
-			}, tempo); // time between each interval in milliseconds
+	     	interval = setInterval (falaAleatorio, tempo); // time between each interval in milliseconds
 		}
 	}
 
@@ -146,7 +150,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         	});
     	} else {
     			
-			tempo = tempoTemp;
+		tempo = tempoTemp;
 
     		bot.sendMessage({
         		to: channelID,
@@ -189,9 +193,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	if (message === 'bn bot') {      	
     	
 		bot.sendMessage({
-    		to: channelID,
-        	message: 'bn'
-    	});
+			to: channelID,
+			message: 'bn'
+    		});
     	
 	}
 
@@ -218,6 +222,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	            message: 'n'
 	        });
 		}
+	}
+	
+	if (message === 'para de falar bot') {      	
+    	
+		clearInterval(interval);
+		
+		bot.sendMessage({
+			to: channelID,
+			message: 'ta'
+    		});
+    	
 	}
 
 });
