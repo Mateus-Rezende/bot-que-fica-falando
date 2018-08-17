@@ -228,7 +228,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	if (message === 'para de falar bot') {      	
     	
 		clearInterval(interval);
-		
+		emLoop = false;
 		bot.sendMessage({
 			to: channelID,
 			message: 'ta'
