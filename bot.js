@@ -249,7 +249,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 	if (message.toLowerCase().substring(0, 12) == 'bot chama o ') {      	
     	
-	var ofensa = message.split(' ')[5];	
+	var ofensa = message.split(' ')[6];	
 	var user = message.split(' ')[3];
 		
 	bot.sendMessage({
