@@ -77,7 +77,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         "add na lista: <o que vc quer adicionar> 	  - preciso falar q é sem os sinais d < >?\n"+
         "muda tempo bot <milisegundos> 				- 60000 da 1 minuto\n"+
 	"bot chama o <usario> de <apelido carinhoso>   - Agrada o usuário mencionado com a palavra escolhida\n"+
-	"hein bot                             - faz uma pergunta de sim ou não ao bot`"
+	"hein bot                                       - faz uma pergunta de sim ou não ao bot`"
 
       });
     }
