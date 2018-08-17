@@ -75,7 +75,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         "eai bot 									  - pra dar um oi\n"+
         "o chris é gay né 							 - pra ver se o chris é gay (valor aleatorio é gerado)\n"+
         "add na lista: <o que vc quer adicionar> 	  - preciso falar q é sem os sinais d < >?\n"+
-        "muda tempo bot <milisegundos> 				- 60000 da 1 minuto`"
+        "muda tempo bot <milisegundos> 				- 60000 da 1 minuto`\n"+
+	"bot chama o <usario> de <apelido carinhoso>            - Agrada o usuário mencionado com a palavra escolhida"      
 
       });
     }
@@ -249,6 +250,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 	if (message.toLowerCase().substring(0, 12) == 'bot chama o ') {      	
     	
+	message = message.replace(/\s+/g,' ');
+		
 	var ofensa = message.split(' ')[5];	
 	var user = message.split(' ')[3];
 		
