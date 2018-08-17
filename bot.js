@@ -52,7 +52,18 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	        	message: "ok chefe"
 	      	});
 
-	     	interval = setInterval(falaAleatorio, tempo); // time between each interval in milliseconds
+	     	interval = setInterval(function (){
+	        	
+			var fs = require("fs");
+			var text = fs.readFileSync("./lista.txt").toString('utf-8');
+			var msgs = text.split("\n");
+			var randMsg = Math.round(Math.random() * msgs.length-1);
+
+			bot.sendMessage({
+				to: channelID,
+				message: msgs[randMsg] // message to send
+			});
+		}, tempo); // time between each interval in milliseconds
 	}
 }
 
