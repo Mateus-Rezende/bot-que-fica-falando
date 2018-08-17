@@ -19,8 +19,6 @@ bot.on('ready', function (evt) {
 
 });
 
-client.login(process.env.BOT_TOKEN);
-
 var emLoop = false;
 var tempo = 90000;
 
@@ -224,4 +222,3 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 });
 
-client.login(process.env.BOT_TOKEN);
