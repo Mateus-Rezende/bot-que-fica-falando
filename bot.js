@@ -250,7 +250,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	if (message.toLowerCase().substring(0, 10) == 'bot testa ') {      	
     	
 		for (var i =0; i<message.length;i++) {
-			if (message[i]=='<'){
+			if (message[i]=='@'){
 				bot.sendMessage({
 					to: channelID,
 					message: 'tem'
