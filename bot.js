@@ -276,5 +276,26 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     	
 	}
 	
+	if (message === 'vlw bot') {      	
+    	
+		bot.sendMessage({
+			to: channelID,
+			message: 'tmj'
+    		});
+    	
+	}
+	
+	if (message.toLowerCase().substring(0, 13) == 'bot fala pro ') {
+    	
+		var user = message.split(' ')[3];
+		var merda = message.split(' ')[6];
+		if (merda == 'merda') {
+			bot.sendMessage({
+				to: channelID,
+				message: user + ' vai a merda cara'
+			});
+		}
+    	
+	}
 });
 
